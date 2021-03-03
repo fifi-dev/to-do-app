@@ -1,6 +1,6 @@
 <template>
   <div class="is-flex">
-    <input class="input is-primary" type="text" placeholder="Primary input"> 
+    <input class="input is-primary" type="text" placeholder="Primary input" v-model="newTodo"> 
    <i class="fas fa-plus-circle "></i>
   </div>
 </template>

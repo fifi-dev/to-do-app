@@ -3,9 +3,7 @@
   <div id="app">
     <section class="hero is-warning is-bold is-fullheight">
       <div class="hero-body">
-        <NewTodo />
         <TodoCard />
-        <TodoList />
       </div>
       <div class="hero-foot">
         <div class="container">
@@ -27,16 +25,12 @@
 </template>
 
 <script>
-import TodoList from './components/TodoList.vue';
 import TodoCard from './components/TodoCard.vue';
-import NewTodo from './components/NewTodo.vue';
 
 export default{
   name: 'App',
   components: {
     TodoCard,
-    TodoList,
-    NewTodo,
   }
   };
 
