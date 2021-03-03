@@ -1,9 +1,13 @@
 
 <template>
   <div id="app">
+    <section hero is-warning is-bold is-fullheight>
+      <div class="hero-body">
+
+     
     <TodoCard />
     <TodoList />
-
+ </div>
     <div class="hero-foot">
         <div class="container">
           <div class="content has-text-centered pb-5">
@@ -19,6 +23,7 @@
           </div>
         </div>
       </div>
+      </section>
   </div>
 </template>
 
