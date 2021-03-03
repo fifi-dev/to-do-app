@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h3>TodoCard</h3>
+      <h3>Todoitem</h3>
   </div>
 </template>
 

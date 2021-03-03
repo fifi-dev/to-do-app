@@ -1,14 +1,10 @@
 
 <template>
   <div id="app">
-     <section class="hero is-warning is-bold is-fullheight">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title">{{msg}}</h1>
-        </div>
-      </div>
+    <TodoCard />
+    <TodoList />
 
-      <div class="hero-foot">
+    <div class="hero-foot">
         <div class="container">
           <div class="content has-text-centered pb-5">
             <p>
@@ -23,11 +19,22 @@
           </div>
         </div>
       </div>
-    </section>
   </div>
 </template>
 
 <script>
+import TodoList from './components/TodoList.vue';
+import TodoCard from './components/TodoCard.vue';
+
+export default{
+  name: 'App',
+  components: {
+    TodoCard,
+    TodoList,
+  }
+  };
+
+/*
 export default {
   name: 'app',
   data () {
@@ -36,6 +43,7 @@ export default {
     }
   }
 }
+*/
 </script>
 
 <style>
