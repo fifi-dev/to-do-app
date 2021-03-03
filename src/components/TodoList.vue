@@ -1,39 +1,42 @@
-
 <template>
- <div>
-      <h3>Todoitem</h3>
-      <ul>
-          <li>
-              <label class="checkbox">
-                  <input type="checkbox">
-                  Penser à récuperer mes vetements au pressing
-                </label>
-                <i class="fas fa-trash"></i>
-          </li>
-      </ul>
-  </div>
+  <li class=" is-flex">
+    <form
+      class="btn border-0 flex-grow-1 text-left shadow-none "
+      :class="{ completed }"
+      @click="$emit('on-toggle')"
+      v-if="!isEditing"
+    >
+    <i class="far fa-circle"></i>
+      <span>{{ name }}</span>
+    </form>
+    <button @click="$emit('on-delete')" class="btn btn-outline-danger border-0">
+      <i class="fas fa-trash"></i>
+    </button>
+  </li>
 </template>
 
 <script>
-
-export default{
-
-  };
-
-/*
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Hello, et bienvenue sur la demo TodoList en Vue.js!'
-    }
-  }
-}
-*/
+  props: {
+    name: String,
+    completed: Boolean
+  },
+};
 </script>
 
-<style>
-.fa-trash{
+<style scoped>
+
+.completed {
+  text-decoration: line-through;
+}
+button{
+    border: none;
+    background-color: transparent;
     margin-left: 80px;
+    text-align: left;
+}
+
+.fa-trash{
+    font-size: 20px;
 }
 </style>

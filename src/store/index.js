@@ -25,9 +25,19 @@ export default createStore({
       }
     ]
   },
-  mutations: {
+  getters: {
+    allTodos: (state) => state.todos,
   },
   actions: {
+    addTodo({ commit }, todo){
+      commit("add_todo", todo);
+    }
+  },
+  mutations: {
+    add_todo(state,todo){
+      state.todo.push(todo);
+      console.log(state.todos)
+    }
   },
   modules: {
   }
