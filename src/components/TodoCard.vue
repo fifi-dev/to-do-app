@@ -1,15 +1,9 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 py-5">
-        <h1>{{ listName }}</h1>
-      </div>
-    </div>
+  <div class="card">
     <div class="row mb-3">
       <NewTodo @on-new-todo="addTodo($event)" />
     </div>
     <div class="row">
-      <div class="col-12 col-sm-10 col-lg-6">
         <ul class="list-group">
           <TodoList
             v-for="(todo, index) in todos"
@@ -21,7 +15,6 @@
             @on-edit="editTodo(todo, $event)"
           />
         </ul>
-      </div>
     </div>
   </div>
 </template>
@@ -45,12 +38,14 @@ export default {
     };
   },
   methods: {
+    //ajouter une tache
     addTodo(newTodo) {
       this.todos.push({ name: newTodo, completed: false });
     },
     toggleTodo(todo) {
       todo.completed = !todo.completed;
     },
+    //supprimer une tache
     deleteTodo(deletedTodo) {
       this.todos = this.todos.filter(todo => todo !== deletedTodo);
     },
@@ -59,4 +54,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card{
+  width: 600px;
+  overflow: hidden;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+</style>

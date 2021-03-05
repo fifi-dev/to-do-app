@@ -1,9 +1,8 @@
 <template>
-  <form class="is-flex" @submit.prevent="addTodo()">
+  <form class="newtodo is-flex" @submit.prevent="addTodo()">
     <input
       v-model="newTodo"
       type="text"
-      class="input is-primary"
       placeholder="Create a new to-do..."
     />
     <i  class="fas fa-plus-circle form-control"></i>
@@ -28,4 +27,23 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.newtodo{
+  text-align: center;
+  width: 290px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+input{
+  width: 200px;
+  border: none;
+  border-bottom: 2px solid green;
+  text-align: center;
+}
+
+.fa-plus-circle{
+  font-size: 32px;
+  margin-left: 50px;
+  color: green;
+}
+</style>

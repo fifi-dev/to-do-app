@@ -1,5 +1,6 @@
 <template>
-  <li class=" is-flex">
+  <li class="list is-flex">
+    <div class="left">
     <form
       class="btn border-0 flex-grow-1 text-left shadow-none "
       :class="{ completed }"
@@ -9,9 +10,12 @@
     <i class="far fa-circle"></i>
       <span>{{ name }}</span>
     </form>
+    </div>
+    <div class="right">
     <button @click="$emit('on-delete')" class="btn btn-outline-danger border-0">
       <i class="fas fa-trash"></i>
     </button>
+    </div>
   </li>
 </template>
 
@@ -38,5 +42,16 @@ button{
 
 .fa-trash{
     font-size: 20px;
+    color: red;
+}
+
+.fa-circle{
+ margin: 20px 10px;
+}
+.list{
+  width: 600px;
+}
+.is-flex{
+  justify-content: space-between;
 }
 </style>
