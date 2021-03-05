@@ -29,9 +29,9 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 span{
-  font-family: 'Caveat', cursive;
+  font-family: 'Righteous', cursive;
   font-size: 22px;
 }
 .completed {
@@ -53,7 +53,7 @@ button{
  margin: 20px 10px;
 }
 .list{
-  width: 550px;
+  width: 750px;
   margin: 20px auto;
 }
 .is-flex{

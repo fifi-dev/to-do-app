@@ -3,7 +3,7 @@
     <input
       v-model="newTodo"
       type="text"
-      placeholder="Create a new to-do..."
+      placeholder="Nouvelle tache..."
     />
     <i  @click="addTodo()" class="fas fa-plus-circle form-control"></i>
   </form>
@@ -37,13 +37,19 @@ export default {
 input{
   width: 200px;
   border: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #00FA9A;
   text-align: center;
+  color: rgba(143, 138, 138, 0.671);
+  font-family: 'Righteous', cursive;
+}
+
+input:focus{
+  border: 2px solid #00FA9A;
 }
 
 .fa-plus-circle{
   font-size: 32px;
   margin-left: 50px;
-  color: green;
+  color: #00FA9A;
 }
 </style>
