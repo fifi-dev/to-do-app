@@ -5,7 +5,7 @@
       type="text"
       placeholder="Create a new to-do..."
     />
-    <i  class="fas fa-plus-circle form-control"></i>
+    <i  @click="addTodo()" class="fas fa-plus-circle form-control"></i>
   </form>
 </template>
 

@@ -29,7 +29,11 @@ export default {
 </script>
 
 <style scoped>
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+span{
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+}
 .completed {
   text-decoration: line-through;
 }
@@ -49,7 +53,8 @@ button{
  margin: 20px 10px;
 }
 .list{
-  width: 600px;
+  width: 550px;
+  margin: 20px auto;
 }
 .is-flex{
   justify-content: space-between;
