@@ -3,7 +3,7 @@
     <div class="header is-flex">
       <span>{{ date }}</span>
       <h1>{{ listName }}</h1>
-      <span>5 taches</span>
+      <span>{{ todos.length }} taches</span>
     </div>
     <div class="row mb-3">
       <NewTodo @on-new-todo="addTodo($event)" />
@@ -31,15 +31,10 @@ export default {
     return {
       listName : "Vue.JS Todo List",
       date: new Intl.DateTimeFormat('fr-FR', { dateStyle: 'full'}).format(),
-      todos: [
-        { name: "penser à planifier les vacances", completed: false },
-        { name: "planifier mon loyer", completed: false },
-        { name: "mission ikea", completed: false },
-        { name: "aller au cours d'aqua boxing", completed: false },
-        { name: "Penser à récupérer mes vetements au pressing", completed: false },
-      ],
+      todos: [],
     };
   },
+
   methods: {
     //ajouter une tache
     addTodo(newTodo) {
@@ -54,6 +49,7 @@ export default {
     },
   },
   components: { TodoList, NewTodo },
+
 };
 </script>
 
