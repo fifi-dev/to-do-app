@@ -9,7 +9,7 @@
         <div class="container">
           <div class="content has-text-centered pb-5">
             <p>
-              <strong>Atelier Mars 2021</strong>
+              <strong>© Fideline Bazana NTOMO ©</strong>
             </p>
             <p>
               Découvrez comment styliser simplement votre ToDo list avec 
